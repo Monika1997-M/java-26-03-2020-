@@ -1,0 +1,31 @@
+ class Student 
+    {
+      /* declare the fields of the class */
+      int roll;
+      float percent;
+      /* declare the methods */
+      void setData(int roll_no, float percentage)
+      { // stores the input data
+	  roll = roll_no;
+	  percent = percentage;
+      }
+      void displayData() //create display method to store data
+      {
+          // displays the stored data
+          System.out.println("Student Info :- ");
+          System.out.println("Roll : " + roll + "  Percentage : " + percent);
+      }
+}
+public class StudentInfo 
+    {
+   public static void main(String args[])
+    {
+      Student stud1 = new Student();//create an object to store a student's info
+      // call setData() to store student's roll and percentage
+      stud1.setData(30, 76.47f); 
+      Student stud2 = new Student(); // stud2 stores info about another student
+      stud2.setData(11, 86.43f);
+      /* display the information about 2 students */
+      stud1.displayData();
+      stud2.displayData();
+   }
